@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kamila Nawa Ibnatie</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #ffe6f1;
+            color: #6b3150;
+            font-family: 'Poppins', Arial, sans-serif;
+
+            /* Hiasan bunga di background */
+            background-image:
+                radial-gradient(circle at 10% 20%, #ffffff 0 5px, transparent 6px),
+                radial-gradient(circle at 90% 15%, #f8a9c8 0 6px, transparent 7px),
+                radial-gradient(circle at 15% 85%, #f8a9c8 0 6px, transparent 7px),
+                radial-gradient(circle at 85% 80%, #ffffff 0 5px, transparent 6px);
+            background-size: 120px 120px;
+        }
+
+        /* =========================
+           NAVIGASI
+        ========================= */
+
+        nav {
+            background: #f27eae;
+            padding: 18px;
+            text-align: center;
+            border-bottom: 4px solid #d94f8a;
+            box-shadow: 0 4px 10px rgba(180, 70, 120, 0.2);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 15px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffe1ed;
+        }
+
+
+        /* =========================
+           PROFIL
+        ========================= */
+
+        header {
+            text-align: center;
+            padding: 45px 20px;
+        }
+
+        .profile {
+            display: inline-block;
+            position: relative;
+        }
+
+        .profile img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+
+            /* Membuat foto bulat */
+            border-radius: 50%;
+
+            border: 7px solid #f27eae;
+
+            background: white;
+
+            box-shadow:
+                8px 8px 0 #e7a0bf;
+
+            transition: 0.3s;
+        }
+
+        .profile img:hover {
+            transform: scale(1.05) rotate(2deg);
+        }
+
+        /* Pita di foto */
+        .profile::after {
+            content: "🎀";
+            position: absolute;
+            right: -20px;
+            top: -20px;
+            font-size: 45px;
+        }
+
+        h1 {
+            color: #d94f8a;
+            font-size: 42px;
+            margin: 20px 0 5px;
+
+            text-shadow: 2px 2px #ffc4d9;
+        }
+
+        header p {
+            color: #8d4b69;
+            font-size: 18px;
+        }
+
+
+        /* =========================
+           OVERVIEW
+        ========================= */
+
+        article {
+            max-width: 800px;
+            margin: 25px auto;
+
+            background: rgba(255, 250, 253, 0.95);
+
+            padding: 30px;
+
+            border: 3px solid #f29bc1;
+            border-radius: 20px;
+
+            box-shadow: 7px 7px 0 #e7a0bf;
+
+            position: relative;
+        }
+
+        article::after {
+            content: "🌸";
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            font-size: 30px;
+        }
+
+        h2 {
+            color: #d94f8a;
+            font-size: 30px;
+        }
+
+
+        /* =========================
+           TABEL
+        ========================= */
+
+        .table-container {
+            max-width: 800px;
+            margin: 45px auto;
+            padding: 0 20px;
+        }
+
+        table {
+            width: 100%;
+
+            border-collapse: separate;
+            border-spacing: 0;
+
+            background: white;
+
+            border: 3px solid #e56b9d;
+            border-radius: 18px;
+
+            overflow: hidden;
+
+            box-shadow: 7px 7px 0 #e7a0bf;
+        }
+
+        /* Judul tabel */
+
+        th {
+            background: #f27eae;
+            color: white;
+
+            padding: 18px;
+
+            font-size: 19px;
+
+            text-align: center;
+        }
+
+        /* Isi tabel */
+
+        td {
+            padding: 20px;
+
+            border-top: 2px solid #f5c4d8;
+
+            vertical-align: top;
+
+            line-height: 1.8;
+        }
+
+        /* Warna baris */
+
+        tr:nth-child(even) td {
+            background: #fff0f6;
+        }
+
+        tr:hover td {
+            background: #ffe0ec;
+        }
+
+        /* Daftar */
+
+        ul {
+            margin: 0;
+            padding-left: 22px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+
+        /* =========================
+           PITA
+        ========================= */
+
+        .ribbon {
+            width: 200px;
+
+            margin: 40px auto 25px;
+
+            padding: 12px;
+
+            background: #f27eae;
+
+            color: white;
+
+            text-align: center;
+
+            font-weight: bold;
+
+            border-radius: 10px;
+
+            box-shadow: 4px 4px 0 #d94f8a;
+
+            position: relative;
+        }
+
+        .ribbon::before,
+        .ribbon::after {
+            content: "";
+
+            position: absolute;
+
+            top: 5px;
+
+            width: 35px;
+            height: 35px;
+
+            background: #e9699f;
+
+            z-index: -1;
+        }
+
+        .ribbon::before {
+            left: -25px;
+            transform: rotate(35deg);
+        }
+
+        .ribbon::after {
+            right: -25px;
+            transform: rotate(-35deg);
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        hr {
+            border: none;
+            border-top: 2px dashed #e99abb;
+            margin: 40px 20px;
+        }
+
+        footer {
+            background: #d94f8a;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 25px;
+
+            margin-top: 50px;
+        }
+
+        footer::before {
+            content: "🌸 🎀 🌷 🎀 🌸";
+
+            display: block;
+
+            font-size: 22px;
+
+            margin-bottom: 10px;
+        }
+
+
+        /* =========================
+           RESPONSIVE HP
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            nav a {
+                display: block;
+                margin: 8px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            h2 {
+                font-size: 25px;
+            }
+
+            .profile img {
+                width: 170px;
+                height: 170px;
+            }
+
+            table {
+                font-size: 14px;
+            }
+
+            th,
+            td {
+                padding: 12px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- NAVIGASI -->
+
+    <nav>
+        <a href="home.html">🏠 Home</a>
+        <a href="Download CV.html">📄 Download CV</a>
+        <a href="about me.html"> About </a>
+        <a href="contact.html">contact me</a>
+    </nav>
+
+
+    <!-- PROFIL -->
+
+    <header>
+
+        <div class="profile">
+
+            <img src="nanat.jpeg" alt="Foto profil">
+        </div>
+        <style>
+.profile {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.profile img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%; /* bikin bulat */
+  object-fit: cover; /* biar gak gepeng */
+  border: 4px solid #ffb6d9;
+  display: block;
+}
+</style>
+        <h1>Kamila Nawa Ibnatie</h1>
+
+        <p>🌷 Pelajar di SMKN 2 Magelang 🌷</p>
+
+    </header>
+
+
+    <!-- PITA -->
+
+    <div class="ribbon">
+        🎀 MY PORTFOLIO 🎀
+    </div>
+
+
+    <!-- OVERVIEW -->
+
+    <article>
+
+        <h2>🌸 Overview</h2>
+
+        <p>
+            Hi, saya adalah seorang pelajar di SMKN 2 Magelang
+            yang saat ini sedang belajar HTML.
+        </p>
+
+    </article>
+
+
+    <!-- TABEL -->
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>🎀 Skill</th>
+                    <th>🌷 Pengalaman</th>
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+
+                <tr>
+
+                    <td>
+
+                        <ul>
+
+                            <li>HTML — Expert</li>
+
+                            <li>CSS — Beginner</li>
+
+                            <li>JavaScript — Beginner</li>
+
+                        </ul>
+
+                    </td>
+
+
+                    <td>
+
+                        <ul>
+
+                            <li>Freelancer di Internet</li>
+
+                            <li>Leader Local Linux Community</li>
+
+                            <li>Belajar dan mengembangkan kemampuan coding</li>
+
+                        </ul>
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+    <hr>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            Copyright &copy; 2026
+            KAMILA NAWA IBNATIE
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio Kamila Nawa Ibnatie</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Poppins, sans-serif; }
+  body { background: #ffeef3; }
+
+  /* NAVBAR */
+  .navbar {
+    background: #e68aa8;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  .navbar a { color: white; text-decoration: none; font-weight: bold; }
+
+  /* HOME */
+  #home {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #ffeef3;
+    background-image: radial-gradient(#e6a8bb 4px, transparent 4px);
+    background-size: 40px 40px;
+  }
+  .profile img {
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid #e9b0c3;
+  }
+  #home h1 { color: #b24a6e; font-size: 38px; margin-top: 20px; }
+  #home p { color: #7a4a5a; letter-spacing: 1px; margin-top: 5px; }
+
+  /* CV */
+  #cv { background: #fff; padding: 70px 15px; }
+  .cv-container { max-width: 850px; margin: auto; background: #fff0f5; border-radius: 20px; padding: 35px; border: 2px solid #e9b0c3; }
+  .cv-header { text-align: center; border-bottom: 2px dashed #e9b0c3; padding-bottom: 25px; margin-bottom: 25px; }
+  .cv-header img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 4px solid white; }
+  .cv-header h2 { color: #b24a6e; margin: 10px 0 5px; }
+  .kontak { margin-top: 10px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; font-size: 13px; color: #555; }
+  .cv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; text-align: left; }
+  .cv-grid h3 { color: #b24a6e; font-size: 16px; margin-bottom: 8px; margin-top: 18px; }
+  .cv-grid p, .cv-grid li { font-size: 14px; color: #444; line-height: 1.6; }
+  .cv-grid ul { padding-left: 18px; }
+  .skill-box span { display: inline-block; background: white; border: 1.5px solid #e68aa8; color: #e68aa8; padding: 5px 12px; border-radius: 20px; font-size: 12px; margin: 4px; font-weight: bold; }
+  .cv-action { text-align: center; margin-top: 35px; }
+  .btn-download { background: #e68aa8; color: white; padding: 13px 28px; border-radius: 30px; text-decoration: none; font-weight: bold; display: inline-block; }
+  @media (max-width: 600px) { .cv-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="#home">🏠 Home</a>
+  <a href="#cv">📄 CV</a>
+  <a href="#about">✨ About</a>
+</nav>
+
+<section id="home">
+  <div class="profile">
+    <img src="../nanaw.jpeg" alt="Foto Profil Kamila">
+  </div>
+  <h1>Kamila Nawa Ibnatie</h1>
+  <p>🌷 Pelajar di SMKN 2 Magelang - PPLG 🌷</p>
+</section>
+
+<section id="cv">
+  <div class="cv-container">
+    <div class="cv-header">
+      <img src="../nanaw.jpeg" alt="Foto Kamila">
+      <h2>Kamila Nawa Ibnatie</h2>
+      <p>Pelajar PPLG - SMKN 2 Magelang</p>
+      <div class="kontak">
+        <span>📧 kamilanawa@email.com</span>
+        <span>📱 0856-4761-7581</span>
+        <span>📍 Gumuk,Daleman Kidul,KEC Pakis,KAB Magelang</span>
+      </div>
+    </div>
+    <div class="cv-grid">
+      <div>
+        <h3>✨ Tentang Saya</h3>
+        <p>Siswi PPLG yang antusias di dunia Web Development dan UI/UX Design. Suka membuat website yang estetik dan fungsional.</p>
+        <h3>duduk dibangku SMK tepatnya di SMKN 2 Magelang</h3>
+        <ul>
+          <li><b>2026 - Sekarang</b><br>SMKN 2 Magelang - PPLG</li>
+          <li><b>2023 - 2025</b><br>SMP N 2 Pakis</li>
+        </ul>
+        <h3>💖 Skill</h3>
+        <div class="skill-box">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Figma</span><span>Canva</span>
+        </div>
+      </div>
+      <div>
+        <h3>💻 Project</h3>
+        <ul>
+          <li><b>Website Portfolio</b> - Portfolio pribadi dengan HTML & CSS</li>
+          <li><b>Desain UI Aplikasi</b> - Desain di Figma</li>
+          <li><b>Landing Page</b> - Tugas PPLG</li>
+        </ul>
+        <h3>Kemampuan</h3>
+        <ul>
+          <li>HTML & CSS - dasar web</li>
+          <li>JavaScript Basic</li>
+        </ul>
+      </div>
+    </div>
+    <div class="cv-action">
+      <a href="#" onclick="window.print()" class="btn-download">⬇️ Download / Print CV</a>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
